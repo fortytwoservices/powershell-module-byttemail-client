@@ -1,0 +1,8 @@
+Pegasus/.DS_Store
+*.md.tmp
+*.zip
+.DS_Store
+.idea
+scim_artifacts/
+testing.ps1
+.vscode/
