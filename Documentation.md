@@ -4,7 +4,7 @@ A module for working with the Bytt.Email service
 
 | Metadata | Information |
 | --- | --- |
-| Version | 0.1.0 |
+| Version | 0.2.0 |
 | Required modules | EntraIDAccessToken |
 | Author | Marius Solbakken Mellum |
 | Company name | Fortytwo Technologies AS |
