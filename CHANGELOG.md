@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.0](https://github.com/fortytwoservices/powershell-module-byttemail-client/compare/v0.0.1...v0.1.0) (2026-01-23)
+
+
+### Features
+
+* Inititial release ([879e0aa](https://github.com/fortytwoservices/powershell-module-byttemail-client/commit/879e0aa85844220ee6157b8101179ec4a760bff0))
+* Inititial release ([4b86230](https://github.com/fortytwoservices/powershell-module-byttemail-client/commit/4b86230367ce09d8265b29462438d60e56e68c15))
+
 ## [3.6.0](https://github.com/fortytwoservices/powershell-module-pegasus/compare/v3.5.0...v3.6.0) (2025-11-11)
 
 
