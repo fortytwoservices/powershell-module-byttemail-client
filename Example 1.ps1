@@ -13,4 +13,4 @@ Get-ByttEmailHistory
 
 Get-ByttEmailGeneratedAddressForExistingUser -ObjectId ce3d945f-fc56-4b19-9891-665ca05a998d | ConvertTo-Json -Depth 10
 
-Get-ByttEmailGeneratedAddressForNewUser -FirstName "Ole-Marius Solbakken" -LastName "Gammel" -Anchor "custom-anchor-123" -Groups "23e5eefb-ef8e-443b-8d3a-95d40ffa807e" | ConvertTo-Json -Depth 10 
+Get-ByttEmailGeneratedAddressForNewUser -FirstName "Marius" -LastName "Solbakken Mellum" -Anchor "4233" -Groups "23e5eefb-ef8e-443b-8d3a-95d40ffa807e" | ConvertTo-Json -Depth 10
