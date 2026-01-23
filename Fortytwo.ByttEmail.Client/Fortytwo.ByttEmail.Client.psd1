@@ -4,7 +4,7 @@
     RootModule        = 'Fortytwo.ByttEmail.Client.psm1'
 
     # Version number of this module.
-    ModuleVersion     = '0.1.0'
+    ModuleVersion = '0.1.0'
 
     # Supported PSEditions
     # CompatiblePSEditions = @()
@@ -66,7 +66,7 @@
     FunctionsToExport = '*'
 
     # Cmdlets to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no cmdlets to export.
-    CmdletsToExport   = @('Connect-ByttEmail', 'Get-ByttEmailGeneratedAddressForExistingUser', 'Get-ByttEmailGeneratedAddressForNewUser', 'Get-ByttEmailHistory', 'New-ByttEmailHistory', 'Remove-ByttEmailHistory')
+    CmdletsToExport = @('Connect-ByttEmail','Get-ByttEmailGeneratedAddressForExistingUser','Get-ByttEmailGeneratedAddressForNewUser','Get-ByttEmailHistory','New-ByttEmailHistory','Remove-ByttEmailHistory')
 
     # Variables to export from this module
     VariablesToExport = '*'
