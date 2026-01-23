@@ -85,7 +85,17 @@
 
     # Private data to pass to the module specified in RootModule/ModuleToProcess. This may also contain a PSData hashtable with additional module metadata used by PowerShell.
     PrivateData       = @{
-        PSData = @{}
+        PSData = @{
+            Tags         = @(
+                "EntraID"
+                "Authentication"
+                "Fortytwo"
+                "Bytt.Email"
+            )
+            ProjectUri   = "https://github.com/fortytwoservices/powershell-module-byttemail-client" 
+            LicenseUri   = "https://github.com/fortytwoservices/powershell-module-byttemail-client/tree/main?tab=MIT-1-ov-file"
+            ReleaseNotes = "https://github.com/fortytwoservices/powershell-module-byttemail-client/releases"
+        }
     }
 
 }
