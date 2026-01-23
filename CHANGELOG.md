@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.0](https://github.com/fortytwoservices/powershell-module-byttemail-client/compare/v0.1.0...v0.2.0) (2026-01-23)
+
+
+### Features
+
+* Add links to psd1 for powershell gallery visibility of GitHub project ([4d9436c](https://github.com/fortytwoservices/powershell-module-byttemail-client/commit/4d9436c08cffcea6dc599a3431f16d6ae6ec34a7))
+* Add links to psd1 for powershell gallery visibility of GitHub project ([677db0a](https://github.com/fortytwoservices/powershell-module-byttemail-client/commit/677db0a423ca4a15f6c6cc28150fa6cb80f19a6c))
+
 ## [0.1.0](https://github.com/fortytwoservices/powershell-module-byttemail-client/compare/v0.0.1...v0.1.0) (2026-01-23)
 
 
