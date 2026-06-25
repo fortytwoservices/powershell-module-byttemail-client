@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.3.0](https://github.com/fortytwoservices/powershell-module-byttemail-client/compare/v0.2.0...v0.3.0) (2026-06-25)
+
+
+### Features
+
+* Add account name cmdlets ([#35](https://github.com/fortytwoservices/powershell-module-byttemail-client/issues/35)) ([7fe6465](https://github.com/fortytwoservices/powershell-module-byttemail-client/commit/7fe6465bbf6f3635761de6cdbb9ee49e71a3b70c))
+* Invoke a release in order to verify updated release please configuration ([0b46ed3](https://github.com/fortytwoservices/powershell-module-byttemail-client/commit/0b46ed338256216ca7e0a0179123115d1567ae28))
+* Release ([0494274](https://github.com/fortytwoservices/powershell-module-byttemail-client/commit/0494274c2f3d669ae5f178c94682dec1fbbbb98a))
+
 ## [0.2.0](https://github.com/fortytwoservices/powershell-module-byttemail-client/compare/v0.1.0...v0.2.0) (2026-01-23)
 
 
