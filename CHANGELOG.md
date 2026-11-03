@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.0](https://github.com/fortytwoservices/powershell-module-byttemail-client/compare/v0.3.0...v0.4.0) (2026-11-03)
+
+
+### Features
+
+* Add new cmdlets for email and account name generation from Universe identity ([a6549d2](https://github.com/fortytwoservices/powershell-module-byttemail-client/commit/a6549d2ac1eb8154a975decdbaef4f7f4589c9cc))
+
 ## [0.3.0](https://github.com/fortytwoservices/powershell-module-byttemail-client/compare/v0.2.0...v0.3.0) (2026-06-25)
 
 
