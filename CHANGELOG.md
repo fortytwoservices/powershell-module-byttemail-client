@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.0.0](https://github.com/fortytwoservices/powershell-module-byttemail-client/compare/v0.4.0...v1.0.0) (2026-11-03)
+
+
+### ⚠ BREAKING CHANGES
+
+* Use the Fortytwo.Universe PowerShell module for connecting
+
+### Features
+
+* Use the Fortytwo.Universe PowerShell module for connecting ([b562c0b](https://github.com/fortytwoservices/powershell-module-byttemail-client/commit/b562c0be352bfc1d59333736ae9adf75a0f201c4))
+
 ## [0.4.0](https://github.com/fortytwoservices/powershell-module-byttemail-client/compare/v0.3.0...v0.4.0) (2026-11-03)
 
 

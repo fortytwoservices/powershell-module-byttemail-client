@@ -1,11 +1,11 @@
 # Documentation for module Fortytwo.ByttEmail.Client
 
-A module for working with the Bytt.Email service
+A module for working with the change email features of Fortytwo Identity Universe
 
 | Metadata | Information |
 | --- | --- |
-| Version | 0.4.0 |
-| Required modules | EntraIDAccessToken |
+| Version | 1.0.0 |
+| Required modules | Fortytwo.Universe |
 | Author | Marius Solbakken Mellum |
 | Company name | Fortytwo Technologies AS |
 | PowerShell version | 7.1 |
