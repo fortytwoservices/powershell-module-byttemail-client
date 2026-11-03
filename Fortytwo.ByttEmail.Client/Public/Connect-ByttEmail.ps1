@@ -21,19 +21,12 @@ function Connect-ByttEmail {
     )
     
     Process {
-        $Script:APIRoot = "https://{0}/changeemail/" -f $FQDN.TrimEnd('/')
-        $Script:EntraIDAccessTokenProfile = $EntraIDAccessTokenProfile
-
+        Write-Warning "The Connect-ByttEmail cmdlet is deprecated, please use Connect-Universe instead"
+        
         if($PSCmdlet.ParameterSetName -eq "interactive") {
-            $ClientId = "68bf2f1d-b9e1-4477-8b90-81314861f05f"
-            $Scope = "https://api.fortytwo.io/.default"
-            if($FQDN -like "localhost*" -or $FQDN -eq "localhost") {
-                $Scope = "https://dev-api.byfortytwo.com/.default"
-                $ClientId = "b24eb00a-7f91-489b-b321-3b018da0e8a8"
-            }
-
-            Add-EntraIDInteractiveUserAccessTokenProfile -ClientId $ClientId -Scope $Scope -Name $EntraIDAccessTokenProfile
-        }
-        Get-EntraIDAccessToken -Profile $EntraIDAccessTokenProfile | Out-Null
+            Connect-Universe -FQDN $FQDN -Environment ($FQDN -eq "api.fortytwo.io" ? "Production": "Development")
+        } else {
+            Connect-Universe -AccessTokenProfile $EntraIDAccessTokenProfile -FQDN $FQDN -Environment ($FQDN -eq "api.fortytwo.io" ? "Production": "Development")
+        }        
     }
 }

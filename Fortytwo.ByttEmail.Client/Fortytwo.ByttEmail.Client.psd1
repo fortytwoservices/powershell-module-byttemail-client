@@ -22,7 +22,7 @@
     Copyright         = '(c) Fortytwo Technologies AS'
 
     # Description of the functionality provided by this module
-    Description       = 'A module for working with the Bytt.Email service'
+    Description       = 'A module for working with the change email features of Fortytwo Identity Universe'
 
     # Minimum version of the PowerShell engine required by this module
     PowerShellVersion = '7.1'
@@ -44,7 +44,7 @@
 
     # Modules that must be imported into the global environment prior to importing this module
     RequiredModules   = @(
-        "EntraIDAccessToken"
+        "Fortytwo.Universe"
     )
 
     # Assemblies that must be loaded prior to importing this module
@@ -87,10 +87,10 @@
     PrivateData       = @{
         PSData = @{
             Tags         = @(
-                "EntraID"
-                "Authentication"
                 "Fortytwo"
+                "Universe"
                 "Bytt.Email"
+                "ChangeEmail"
             )
             ProjectUri   = "https://github.com/fortytwoservices/powershell-module-byttemail-client" 
             LicenseUri   = "https://github.com/fortytwoservices/powershell-module-byttemail-client/tree/main?tab=MIT-1-ov-file"

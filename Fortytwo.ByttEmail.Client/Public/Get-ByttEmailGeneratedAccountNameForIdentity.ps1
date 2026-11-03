@@ -8,11 +8,11 @@ function Get-ByttEmailGeneratedAccountNameForIdentity {
     )
 
     Process {
-        $ApiEndpoint = "{0}accountnames/generate/$Id" -f $Script:APIRoot
+        $ApiEndpoint = Get-UniverseUrl -Path "changeemail/accountnames/generate/$Id"
         Write-Debug "Using Bytt.Email to generate account names for identity $Id using endpoint $ApiEndpoint"
 
         try {
-            Invoke-RestMethod -Uri $ApiEndpoint -Headers (Get-EntraIDAccessTokenHeader -Profile $Script:EntraIDAccessTokenProfile)
+            Invoke-RestMethod -Uri $ApiEndpoint -Headers (Get-UniverseHeader)
         }
         catch {
             Write-Error -Message "Failed to generate Bytt.Email account names: $_"

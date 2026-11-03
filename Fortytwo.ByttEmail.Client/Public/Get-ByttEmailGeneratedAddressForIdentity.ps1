@@ -8,11 +8,11 @@ function Get-ByttEmailGeneratedAddressForIdentity {
     )
 
     Process {
-        $ApiEndpoint = "{0}emailaddresses/generate/$Id" -f $Script:APIRoot
+        $ApiEndpoint = Get-UniverseUrl -Path "changeemail/emailaddresses/generate/$Id"
         Write-Debug "Using Bytt.Email to generate email addresses for identity $Id using endpoint $ApiEndpoint"
 
         try {
-            Invoke-RestMethod -Uri $ApiEndpoint -Headers (Get-EntraIDAccessTokenHeader -Profile $Script:EntraIDAccessTokenProfile)
+            Invoke-RestMethod -Uri $ApiEndpoint -Headers (Get-UniverseHeader)
         }
         catch {
             Write-Error -Message "Failed to generate Bytt.Email addresses: $_"

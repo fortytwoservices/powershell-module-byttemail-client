@@ -4,14 +4,14 @@ function Get-ByttEmailAccountNameHistory {
     Param()
 
     Process {
-        $ApiEndpoint = "{0}accountnamehistory" -f $Script:APIRoot
+        $ApiEndpoint = Get-UniverseUrl -Path "changeemail/accountnamehistory"
         Write-Debug "Retrieving ByttEmail account name history from $ApiEndpoint"
 
         try {
-            Invoke-RestMethod -Uri $ApiEndpoint -Headers (Get-EntraIDAccessTokenHeader -Profile $Script:EntraIDAccessTokenProfile) -Method Get | Foreach-Object { $_ }
+            Invoke-RestMethod -Uri $ApiEndpoint -Headers (Get-UniverseHeader) -Method Get | Foreach-Object { $_ }
         }
         catch {
-            Write-Error -Message "Failed to retrieve ByttEmail history: $_"
+            Write-Error -Message "Failed to retrieve ByttEmail account name history: $_"
         }
     }
 }
