@@ -25,7 +25,7 @@ function Get-ByttEmailGeneratedAddressForNewUser {
             throw "Invalid group ObjectId format: $_. Each group must be a valid GUID."
         }
 
-        $ApiEndpoint = "{0}emailaddresses/generatenewuser" -f $Script:APIRoot
+        $ApiEndpoint = Get-UniverseUrl -Path "changeemail/emailaddresses/generatenewuser"
         Write-Debug "Using Bytt.Email to generate email addresses for new user $FirstName $LastName using endpoint $ApiEndpoint"
 
         $body = @{
@@ -36,7 +36,7 @@ function Get-ByttEmailGeneratedAddressForNewUser {
         }
 
         try {
-            Invoke-RestMethod -Uri $ApiEndpoint -Headers (Get-EntraIDAccessTokenHeader -Profile $Script:EntraIDAccessTokenProfile) -Method Post -Body ($body | ConvertTo-Json -Depth 3) -ContentType "application/json" | Foreach-Object { $_ }
+            Invoke-RestMethod -Uri $ApiEndpoint -Headers (Get-UniverseHeader) -Method Post -Body ($body | ConvertTo-Json -Depth 3) -ContentType "application/json" | Foreach-Object { $_ }
         }
         catch {
             Write-Error -Message "Failed to generate Bytt.Email addresses: $_"

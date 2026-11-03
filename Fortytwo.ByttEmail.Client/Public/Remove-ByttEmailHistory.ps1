@@ -8,12 +8,12 @@ function Remove-ByttEmailHistory {
     )
 
     Process {
-        $ApiEndpoint = "{0}history/{1}" -f $Script:APIRoot, $Id
+        $ApiEndpoint = Get-UniverseUrl -Path "changeemail/history/$Id"
         Write-Debug "Sending delete request to $ApiEndpoint"
 
         try {
             if ($PSCmdlet.ShouldProcess("ByttEmail history with ID $($Id)", "Delete")) {   
-                Invoke-RestMethod -Uri $ApiEndpoint -Headers (Get-EntraIDAccessTokenHeader -Profile $Script:EntraIDAccessTokenProfile) -Method Delete | Out-Null
+                Invoke-RestMethod -Uri $ApiEndpoint -Headers (Get-UniverseHeader) -Method Delete | Out-Null
             }
         }
         catch {

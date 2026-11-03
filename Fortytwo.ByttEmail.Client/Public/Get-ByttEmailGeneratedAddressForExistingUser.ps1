@@ -15,7 +15,7 @@ function Get-ByttEmailGeneratedAddressForExistingUser {
     )
 
     Process {
-        $ApiEndpoint = "{0}emailaddresses/generate" -f $Script:APIRoot
+        $ApiEndpoint = Get-UniverseUrl -Path "changeemail/emailaddresses/generate"
         Write-Debug "Using Bytt.Email to generate email addresses for $($ObjectId ?? $UserPrincipalName) using endpoint $ApiEndpoint"
 
         $body = @{
@@ -30,7 +30,7 @@ function Get-ByttEmailGeneratedAddressForExistingUser {
         }
 
         try {
-            Invoke-RestMethod -Uri $ApiEndpoint -Headers (Get-EntraIDAccessTokenHeader -Profile $Script:EntraIDAccessTokenProfile) -Method Post -Body ($body | ConvertTo-Json -Depth 3) -ContentType "application/json" | Foreach-Object { $_ }
+            Invoke-RestMethod -Uri $ApiEndpoint -Headers (Get-UniverseHeader) -Method Post -Body ($body | ConvertTo-Json -Depth 3) -ContentType "application/json" | Foreach-Object { $_ }
         }
         catch {
             Write-Error -Message "Failed to generate Bytt.Email addresses: $_"

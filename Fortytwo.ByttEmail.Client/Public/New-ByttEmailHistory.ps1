@@ -17,7 +17,7 @@ function New-ByttEmailHistory {
     )
 
     Process {
-        $ApiEndpoint = "{0}history" -f $Script:APIRoot
+        $ApiEndpoint = Get-UniverseUrl -Path "changeemail/history"
         Write-Debug "Sending post request to $ApiEndpoint"
 
         $body = @{
@@ -35,7 +35,7 @@ function New-ByttEmailHistory {
 
         try {
             if ( $PSCmdlet.ShouldProcess("ByttEmail history for $($Email)", "Create")) {
-                Invoke-RestMethod -Uri $ApiEndpoint -Headers (Get-EntraIDAccessTokenHeader -Profile $Script:EntraIDAccessTokenProfile) -Method Post -Body ($body | ConvertTo-Json -Depth 3) -ContentType "application/json" | Foreach-Object { $_ }
+                Invoke-RestMethod -Uri $ApiEndpoint -Headers (Get-UniverseHeader) -Method Post -Body ($body | ConvertTo-Json -Depth 3) -ContentType "application/json" | Foreach-Object { $_ }
             }
         }
         catch {
